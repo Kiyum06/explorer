@@ -70,4 +70,36 @@ public class ExplorerSearchTest {
         assertEquals(6, actual);
     }
 
+
+    @Test
+    public void testReachableArea_allFields() {
+        int[][] island = {
+            {0, 1, 1},
+            {1, 1, 1},
+            {1, 1, 1}
+        };
+
+        assertEquals(9, ExplorerSearch.reachableArea(island));
+    }
+
+    @Test
+    public void testReachableArea_blocked() {
+        int[][] island = {
+            {0, 2, 1},
+            {3, 2, 1},
+            {1, 1, 1}
+        };
+
+        assertEquals(1, ExplorerSearch.reachableArea(island));
+    }
+
+    @Test
+    public void testReachableArea_singleSpace() {
+        int[][] island = {
+            {0}
+        };
+
+        assertEquals(1, ExplorerSearch.reachableArea(island));
+    }
+
 }

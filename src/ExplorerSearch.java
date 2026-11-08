@@ -67,4 +67,28 @@ public class ExplorerSearch {
     }
 
 
+    static int dfs(int[][] island, int row, int col, boolean[][] visited) {
+
+        if (!isValidMove(island, row, col)) {
+            return 0;
+        }
+
+        if (visited[row][col]) {
+            return 0;
+        }
+
+        visited[row][col] = true;
+
+        int count = 1;
+
+        count += dfs(island, row - 1, col, visited);
+        count += dfs(island, row + 1, col, visited);
+        count += dfs(island, row, col - 1, visited);
+        count += dfs(island, row, col + 1, visited);
+
+        return count;
+    }
+
+
+
 }

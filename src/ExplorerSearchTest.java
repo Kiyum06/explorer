@@ -55,4 +55,19 @@ public class ExplorerSearchTest {
     }
 
 
+    @Test
+    public void testDfs() {
+        int[][] island = {
+            {0, 1, 2},
+            {1, 1, 3},
+            {2, 1, 1}
+        };
+
+        boolean[][] visited = new boolean[3][3];
+
+        int actual = ExplorerSearch.dfs(island, 0, 0, visited);
+
+        assertEquals(6, actual);
+    }
+
 }

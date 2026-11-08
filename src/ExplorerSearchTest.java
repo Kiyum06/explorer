@@ -17,4 +17,20 @@ public class ExplorerSearchTest {
 
     // Add more tests here!
     // Come up with varied cases
+
+
+    @Test
+    public void testFindStart() {
+        int[][] island = {
+            {1, 1, 2},
+            {1, 0, 3},
+            {2, 1, 1}
+        };
+
+        assertArrayEquals(
+            new int[]{1, 1},
+            ExplorerSearch.findStart(island)
+        );
+    }
+
 }

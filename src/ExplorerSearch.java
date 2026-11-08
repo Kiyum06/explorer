@@ -28,6 +28,19 @@ public class ExplorerSearch {
      * @param island the locations on the island
      * @return the number of spaces the explorer can reach
      */
+
+
+    private static int[] findStart(int[][] island) {
+        for (int row = 0; row < island.length; row++) {
+            for (int col = 0; col < island[row].length; col++) {
+                if (island[row][col] == 0) {
+                    return new int[]{row, col};
+                }
+            }
+        }
+        return null;
+    }
+
     public static int reachableArea(int[][] island) {
         // Implement your method here!
         // Please also make more test cases

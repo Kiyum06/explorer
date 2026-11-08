@@ -30,7 +30,15 @@ public class ExplorerSearch {
      */
 
 
-    private static int[] findStart(int[][] island) {
+    public static int reachableArea(int[][] island) {
+        // Implement your method here!
+        // Please also make more test cases
+        // I STRONGLY RECOMMEND testing some helpers you might make too
+        return -1;
+    }
+
+
+    static int[] findStart(int[][] island) {
         for (int row = 0; row < island.length; row++) {
             for (int col = 0; col < island[row].length; col++) {
                 if (island[row][col] == 0) {
@@ -41,10 +49,4 @@ public class ExplorerSearch {
         return null;
     }
 
-    public static int reachableArea(int[][] island) {
-        // Implement your method here!
-        // Please also make more test cases
-        // I STRONGLY RECOMMEND testing some helpers you might make too
-        return -1;
-    }
 }

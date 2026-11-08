@@ -19,6 +19,7 @@ public class ExplorerSearchTest {
     // Come up with varied cases
 
 
+
     @Test
     public void testFindStart() {
         int[][] island = {
@@ -27,10 +28,10 @@ public class ExplorerSearchTest {
             {2, 1, 1}
         };
 
-        assertArrayEquals(
-            new int[]{1, 1},
-            ExplorerSearch.findStart(island)
-        );
+        int[] actual = ExplorerSearch.findStart(island);
+
+        assertArrayEquals(new int[]{1, 1}, actual);
     }
+
 
 }

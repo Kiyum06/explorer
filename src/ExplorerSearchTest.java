@@ -34,4 +34,25 @@ public class ExplorerSearchTest {
     }
 
 
+    @Test
+    public void testIsValidMove() {
+        int[][] island = {
+            {0, 1, 2},
+            {1, 3, 1},
+            {2, 1, 1}
+        };
+
+        assertTrue(ExplorerSearch.isValidMove(island, 0, 0));
+        assertTrue(ExplorerSearch.isValidMove(island, 0, 1));
+
+        assertFalse(ExplorerSearch.isValidMove(island, 0, 2));
+        assertFalse(ExplorerSearch.isValidMove(island, 1, 1));
+
+        assertFalse(ExplorerSearch.isValidMove(island, -1, 0));
+        assertFalse(ExplorerSearch.isValidMove(island, 3, 0));
+        assertFalse(ExplorerSearch.isValidMove(island, 0, -1));
+        assertFalse(ExplorerSearch.isValidMove(island, 0, 3));
+    }
+
+
 }

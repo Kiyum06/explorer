@@ -49,4 +49,22 @@ public class ExplorerSearch {
         return null;
     }
 
+
+    static boolean isValidMove(int[][] island, int row, int col) {
+        if (row < 0 || row >= island.length) {
+            return false;
+        }
+
+        if (col < 0 || col >= island[row].length) {
+            return false;
+        }
+
+        if (island[row][col] == 2 || island[row][col] == 3) {
+            return false;
+        }
+
+        return true;
+    }
+
+
 }
